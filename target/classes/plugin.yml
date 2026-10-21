@@ -1,0 +1,14 @@
+name: JoinLogger
+version: '${project.version}'
+main: pl.joinlogger.plugin.JoinLoggerPlugin
+api-version: '1.16'
+author: jaruso99
+description: Loguje proby wejscia graczy (nick, IP, whitelist) i banuje graczy spoza whitelisty.
+commands:
+  joinlogger:
+    description: Zarzadza pluginem JoinLogger
+    aliases: [jl]
+permissions:
+  joinlogger.admin:
+    description: Dostep do komend administracyjnych JoinLogger
+    default: op

@@ -1,0 +1,14 @@
+# Ustawienia pluginu JoinLogger
+
+# Czy logowac wszystkie proby wejscia do pliku plugins/JoinLogger/join-attempts.log
+enable-join-log: true
+
+# Czy banowac na stale graczy, ktorzy nie sa na whitelist serwera
+# (dziala tylko gdy whitelista serwera jest wlaczona - online-mode whitelist)
+enable-auto-ban: true
+
+# Powod bana nadawany graczom spoza whitelisty
+ban-reason: "&cNie jestes na whitelist tego serwera!"
+
+# Czy zapisywac bana takze w logu prob wejscia
+log-bans: true
