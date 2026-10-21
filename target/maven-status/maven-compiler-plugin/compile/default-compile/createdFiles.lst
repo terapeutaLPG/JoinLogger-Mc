@@ -2,4 +2,5 @@ pl\joinlogger\plugin\LogService.class
 pl\joinlogger\plugin\JoinLoggerPlugin.class
 pl\joinlogger\plugin\JoinListener.class
 pl\joinlogger\plugin\JoinLoggerCommand.class
+pl\joinlogger\plugin\PlayerRegistry.class
 pl\joinlogger\plugin\StateService.class

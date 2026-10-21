@@ -26,6 +26,7 @@ public final class JoinListener implements Listener {
         if (!player.isWhitelisted()) {
             return;
         }
+        plugin.getPlayerRegistry().record(player.getName());
         @SuppressWarnings("deprecation")
         BanList nameBans = Bukkit.getBanList(BanList.Type.NAME);
         nameBans.pardon(player.getName());
@@ -45,6 +46,8 @@ public final class JoinListener implements Listener {
         String nick = player.getName();
         String ip = event.getAddress().getHostAddress();
         boolean whitelisted = player.isWhitelisted();
+
+        plugin.getPlayerRegistry().record(nick);
 
         if (plugin.getConfig().getBoolean("enable-join-log", true)) {
             plugin.getLogService().logJoinAttempt(nick, ip, whitelisted);

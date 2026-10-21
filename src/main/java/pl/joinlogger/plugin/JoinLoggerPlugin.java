@@ -8,6 +8,7 @@ public final class JoinLoggerPlugin extends JavaPlugin {
 
     private LogService logService;
     private StateService stateService;
+    private PlayerRegistry playerRegistry;
 
     @Override
     public void onEnable() {
@@ -15,6 +16,7 @@ public final class JoinLoggerPlugin extends JavaPlugin {
 
         this.stateService = new StateService(this);
         this.logService = new LogService(this);
+        this.playerRegistry = new PlayerRegistry(this);
 
         getServer().getPluginManager().registerEvents(new JoinListener(this), this);
 
@@ -43,6 +45,10 @@ public final class JoinLoggerPlugin extends JavaPlugin {
 
     public StateService getStateService() {
         return stateService;
+    }
+
+    public PlayerRegistry getPlayerRegistry() {
+        return playerRegistry;
     }
 
     File getLogFile() {
